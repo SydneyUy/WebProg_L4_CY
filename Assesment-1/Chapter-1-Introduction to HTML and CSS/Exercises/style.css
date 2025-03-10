@@ -1,0 +1,17 @@
+body { background-color: #e2c983;
+    color: #fff9f3;
+     font-family: 'Times New Roman', Times, serif; }
+	 
+h1 { background-color: #746743;   
+     color: #fff9f3;
+     font-family: 'Times New Roman'; text-align: center }
+	 
+h2 { background-color:#a18a49;
+    color: #fff9f3;
+     font-family: 'Times New Roman'; text-align: center }
+	 
+p {color: #fff9f3;
+    font-family:'Times New Roman', Times, serif;
+font-size: large}
+ul {color: #fff9f3 ;font-size: large;}
+ol {color: #fff9f3 ;font-size: large;}
