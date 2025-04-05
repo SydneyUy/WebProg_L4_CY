@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <style>
+    body {background-color: #85aab4; 
+            font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif; 
+           height: 100vh;
+           margin: 0;}
+    label {border: 3px solid #295460;}
+    h2 {background-color: #295460; color: #85aab4;}
+    input:hover{font-size: 15px; border-color: antiquewhite;}
+  button:hover {border-color: #001aff; font-size: 15px;}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2><center>Petrol Calculator</center></h2>
+    <label for="cost"><strong>Enter the cost of petrol per liter:</strong></label>
+	<br>
+  <input type="text" placeholder="1.72" id="cost" name="cost"><br><br>
+
+  <label for="liters"><strong>Enter the number of liters purchased:</strong></label>
+  <br>
+  <input type="text" placeholder="0" id="liters" name="liters"><br><br>
+  <button onclick="calculateCost()"><strong>calculate</strong></button>
+  <h3 id="result"></h3>
+<script lang="Javascript" type="text/Javascript" src="script.js">
+
+function calculateCost() {
+            // Get the values from the input fields
+            let costPerLiter = parseFloat(document.getElementById('cost').value);
+            let litersPurchased = parseFloat(document.getElementById('liters').value);
+
+            // Check if the inputs are valid numbers
+            if (isNaN(costPerLiter) || isNaN(litersPurchased) || costPerLiter <= 0 || litersPurchased <= 0) {
+                document.getElementById('result').innerHTML = "Please enter valid positive numbers.";
+            } else {
+                // Calculate the total cost
+                let totalCost = costPerLiter * litersPurchased;
+
+                // Display the result
+                document.getElementById('result').innerHTML = "Total cost: " + totalCost.toFixed(2) + " units";
+            }
+        }
+</script>
+</body>
+</html>
