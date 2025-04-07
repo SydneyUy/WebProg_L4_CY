@@ -7,7 +7,8 @@
            height: 100vh;
            margin: 0;}
     label {border: 3px solid #295460;display: flex;
-           justify-content: center; align-items: center;}
+           justify-content: center; align-items: center;color:#295460}
+    mark {background-color: #85aab4; color: #c7e2ea}
     h2 {background-color: #295460; color: #85aab4;}
     input:hover{font-size: 15px; border-color:#295460;}
   button:hover {border-color:#295460; font-size: 15px;}
@@ -20,11 +21,11 @@
 
 <body>
     <h2><center>Petrol Calculator</center></h2>
-    <label for="cost"><strong>Enter the cost of petrol per liter:</strong></label>
+    <label for="cost"><strong>Enter the <mark>cost of petrol</mark> per liter:</strong></label>
 	<br>
   <center><input type="text" placeholder="1.72" id="cost" name="cost"></center><br><br>
 
-  <label for="liters"><strong>Enter the number of liters purchased:</strong></label>
+  <label for="liters"><strong>Enter the number of <mark>liters</mark> purchased:</strong></label>
   <br>
   <center><input type="text" placeholder="0" id="liters" name="liters"></center><br><br>
   <center><button onclick="calculateCost()"><strong>Calculate</strong></center></button>
