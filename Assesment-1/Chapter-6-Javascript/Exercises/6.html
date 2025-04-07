@@ -6,10 +6,11 @@
             font-family: system-ui,'Segoe UI','Open Sans', 'Helvetica Neue', sans-serif; 
            height: 100vh;
            margin: 0;}
-    label {border: 3px solid #295460;}
+    label {border: 3px solid #295460;display: flex;
+           justify-content: center; align-items: center;}
     h2 {background-color: #295460; color: #85aab4;}
-    input:hover{font-size: 15px; border-color: antiquewhite;}
-  button:hover {border-color: #001aff; font-size: 15px;}
+    input:hover{font-size: 15px; border-color:#295460;}
+  button:hover {border-color:#295460; font-size: 15px;}
 
     </style>
     <meta charset="UTF-8">
@@ -21,12 +22,12 @@
     <h2><center>Petrol Calculator</center></h2>
     <label for="cost"><strong>Enter the cost of petrol per liter:</strong></label>
 	<br>
-  <input type="text" placeholder="1.72" id="cost" name="cost"><br><br>
+  <center><input type="text" placeholder="1.72" id="cost" name="cost"></center><br><br>
 
   <label for="liters"><strong>Enter the number of liters purchased:</strong></label>
   <br>
-  <input type="text" placeholder="0" id="liters" name="liters"><br><br>
-  <button onclick="calculateCost()"><strong>calculate</strong></button>
+  <center><input type="text" placeholder="0" id="liters" name="liters"></center><br><br>
+  <center><button onclick="calculateCost()"><strong>Calculate</strong></center></button>
   <h3 id="result"></h3>
 <script lang="Javascript" type="text/Javascript" src="script.js">
 
