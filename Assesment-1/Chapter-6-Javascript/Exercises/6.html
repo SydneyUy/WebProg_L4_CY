@@ -10,8 +10,10 @@
            justify-content: center; align-items: center;color:#295460}
     mark {background-color: #85aab4; color: #c7e2ea}
     h2 {background-color: #295460; color: #85aab4;}
+    h3 {color:#295460}
     input:hover{font-size: 15px; border-color:#295460;}
   button:hover {border-color:#295460; font-size: 15px;}
+  
 
     </style>
     <meta charset="UTF-8">
@@ -25,29 +27,23 @@
 	<br>
   <center><input type="text" placeholder="1.72" id="cost" name="cost"></center><br><br>
 
-  <label for="liters"><strong>Enter the number of <mark>liters</mark> purchased:</strong></label>
-  <br>
-  <center><input type="text" placeholder="0" id="liters" name="liters"></center><br><br>
+  <label for="liters"><strong>Enter the number of <mark>liters</mark> purchased:</strong></label><br>
+<!--label for the button below it, mark highlights the text between it.-->  
+<center><input type="text" placeholder="0" id="liters" name="liters"></center><br><br>
   <center><button onclick="calculateCost()"><strong>Calculate</strong></center></button>
+	<!--once this button is clicked, calculatecost will run.-->  
   <h3 id="result"></h3>
-<script lang="Javascript" type="text/Javascript" src="script.js">
 
-function calculateCost() {
-            // Get the values from the input fields
-            let costPerLiter = parseFloat(document.getElementById('cost').value);
-            let litersPurchased = parseFloat(document.getElementById('liters').value);
-
-            // Check if the inputs are valid numbers
-            if (isNaN(costPerLiter) || isNaN(litersPurchased) || costPerLiter <= 0 || litersPurchased <= 0) {
-                document.getElementById('result').innerHTML = "Please enter valid positive numbers.";
-            } else {
-                // Calculate the total cost
-                let totalCost = costPerLiter * litersPurchased;
-
-                // Display the result
-                document.getElementById('result').innerHTML = "Total cost: " + totalCost.toFixed(2) + " units";
-            }
-        }
+<script>
+  function calculateCost() {
+      let costPerLiter = parseFloat(document.getElementById("cost").value);
+      let litersPurchased = parseFloat(document.getElementById("liters").value);
+//variable costperliter and literspurchased gets the numbers above, the numbers written on cost and liters.
+      let totalCost = costPerLiter * litersPurchased;
+//multiplies cost and liters
+      document.getElementById("result").innerHTML = "Total cost: " + totalCost.toFixed(2) + " units";
+    }
+//shows results.
 </script>
 </body>
 </html>
