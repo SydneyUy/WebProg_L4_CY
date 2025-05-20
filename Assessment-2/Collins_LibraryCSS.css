@@ -1,0 +1,83 @@
+
+* {
+    box-sizing: border-box;
+                        }
+
+.flex-container {
+    display: flex; /*determines the types box that are generated for this element */
+    flex-direction: column;
+    min-height: 100vh;
+        }
+
+
+        .seprtcol {
+            flex: 1;
+            display: flex;
+        }
+        
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+
+html,body {background-color: #f6f2ea; 
+        font-family: "Montserrat", 
+        sans-serif; }
+
+
+.top-header { 
+	width: 100%; 
+	background-image: url(https://www.keio.ac.jp/en/assets/images/about/campus/mita/slide/pic_01.jpg); 
+	background-size: cover; 
+	background-position: center;
+    background-attachment: fixed;
+    height: 119px;
+} 
+ 
+.top-header > h1 { 
+	color: white; 
+	background-color: rgba(0,0,0,0.3); 
+	padding: 30px 30px; 
+    text-align: center;
+} 
+                        
+ nav {
+    background-color: #a97954;
+    color:azure; 
+    flex: 1;
+    font-size: large;
+    width: 31px;
+    height: auto;
+    padding: 35px;
+}
+
+aside {
+      background-color: #c29b87;
+      flex: 1;
+      font-size: large;
+      padding: 25px;
+      height: auto;
+    }
+
+main {
+      width: 100%;
+      background-color: #f6f2ea;
+      color: #361d1e;
+      flex: 1;
+      font-size: large;
+      padding: 25px;
+    }
+
+footer {clear: both;
+    background-color: #532c2e;
+    color:#f6f2ea;
+    flex: 1;
+    position: static;
+   padding: 25px;
+}
+
+a {color:white;text-decoration: none;}
+
+a:hover {color:  #4d2c33}
